@@ -17,6 +17,7 @@ For example, we have the following project structure:
 ├── test.lua
 └── xmake.lua
 ```
+(The complete source for this example can be seen here: [Library with CMakeLists](https://github.com/xmake-io/xmake/tree/master/tests/projects/c/library_with_cmakelists))
 
 The foo directory is a static library maintained by cmake, and the root directory is maintained by xmake. We can define the `package("foo")` package in xmake.lua to describe how to build the foo code library.
 
@@ -54,8 +55,6 @@ For the configuration description of the package, see: [Package description desc
 After defining the package, we can integrate it with `add_requires("foo")` and `add_packages("foo")`, just like integrating remote packages.
 
 In addition, `on_test` is optional. If you want to strictly check whether the package is compiled and installed successfully, you can do some tests in it.
-
-For a complete example, see: [Library with CMakeLists](https://github.com/xmake-io/xmake/tree/master/tests/projects/c/library_with_cmakelists)
 
 ### Integrate Meson source library
 
